@@ -31,19 +31,23 @@ while (option != 3) {
     2. Show registered items
     3. Exit the program
     `));
-
-    if(option == 1){
-        let item = prompt("Enter the name of the item")
-        items.push(item);
-    }
-    else if(option == 2){
-        if(items.length == 0){
-            alert("There's no item registered.")
-        } else {
-            alert(items)
-        }
+    switch(option){
+        case 1:
+            let item = prompt("Enter the name of the item")
+            items.push(item);
+            break;
+        case 2:
+            if(items.length == 0){
+                alert("There's no item registered.")
+            } else {
+                alert(items)
+            }
+            break;
+        case 3:
+            alert('Bye')
+            break;
+        default:    
+            alert('Invalid option')        
     } 
-    else {
-        alert('Bye')
-    }
 }
+
